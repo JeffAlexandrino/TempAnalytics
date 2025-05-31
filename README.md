@@ -9,7 +9,7 @@ Por meio da linguagem Python e de bibliotecas especializadas em ciência de dado
 A organização dos diretórios e arquivos tem por objetivo garantir a modularidade e clareza da aplicação:
 
 ```
-ANALISETEMP/
+TEMPANALYTICS/
 │
 ├── .venv/                         
 │
