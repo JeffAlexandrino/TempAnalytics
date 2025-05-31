@@ -4,15 +4,9 @@ import seaborn as sns
 import argparse
 import os
 
-# ---------------------------------------------------------------
 # Configurações gerais de estilo
-# ---------------------------------------------------------------
 sns.set(style="whitegrid")
 plt.rcParams['figure.figsize'] = (12, 6)
-# Para desenvolvimento, é recomendável comentar a linha abaixo para não esconder potenciais avisos:
-# import warnings
-# warnings.filterwarnings('ignore')
-
 
 def carregar_dados(filepath):
     """
@@ -198,7 +192,7 @@ def main():
 
     args = parser.parse_args()
 
-    # Carrega os dados (ou dispara erro se não encontrar o arquivo)
+    # Carrega os dados
     df = carregar_dados(args.arquivo)
 
     # Chama apenas a função correspondente ao gráfico solicitado
