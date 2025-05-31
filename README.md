@@ -1,11 +1,8 @@
-```markdown
 # Análise de Temperaturas Globais
 
 Este projeto tem como finalidade a análise exploratória de dados climáticos históricos, com ênfase na variação da temperatura da superfície terrestre ao longo do tempo. A proposta visa compreender padrões, tendências e variações sazonais, tanto em nível global quanto nacional, a partir de dados provenientes de fontes confiáveis e amplamente reconhecidas.
 
 Por meio da linguagem Python e de bibliotecas especializadas em ciência de dados, os dados são processados, transformados e visualizados de maneira clara e intuitiva, permitindo insights significativos sobre o comportamento térmico do planeta.
-
----
 
 ## Estrutura do Projeto
 
@@ -27,8 +24,6 @@ ANALISETEMP/
 │
 └── README.md                      
 ```
-
----
 
 ## Funcionalidades
 
@@ -56,8 +51,6 @@ A interface gráfica, desenvolvida com a biblioteca `tkinter`, proporciona uma e
 - Navegação por meio de menus para escolher o tipo de análise.
 - Integração com os scripts analíticos.
 - Execução facilitada de gráficos com base na escolha do usuário.
-
----
 
 ## Como Executar
 
@@ -91,8 +84,6 @@ python scripts/tempGlobal.py
 python scripts/tempPaises.py
 ```
 
----
-
 ## Fonte dos Dados
 
 Os dados utilizados nesta aplicação foram obtidos do repositório [Kaggle - Berkeley Earth](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data), amplamente reconhecido por sua qualidade e confiabilidade. Os conjuntos de dados incluem:
@@ -100,9 +91,6 @@ Os dados utilizados nesta aplicação foram obtidos do repositório [Kaggle - Be
 - `GlobalTemperatures.csv`: média global das temperaturas da superfície, incluindo dados com e sem oceano.
 - `GlobalLandTemperaturesByCountry.csv`: série histórica de temperaturas médias por país.
 
----
-
 ## Licença
 
 Este projeto é de uso acadêmico e educativo. Não possui fins comerciais e está disponível para fins de estudo, modificação e aprimoramento conforme necessário.
-```
