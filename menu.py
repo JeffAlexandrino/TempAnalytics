@@ -26,7 +26,6 @@ opcoes_graficos = {
     ]
 }
 
-
 def executar_script():
     script = script_var.get()
     grafico = grafico_var.get()
@@ -59,15 +58,9 @@ def executar_script():
 
     argumento = mapeamento_argumentos.get(grafico, "Todos")
 
-    # ---------------------------------------------------------------
-    # Usa sys.executable para garantir que o mesmo Python que
-    # executa o menu seja utilizado nos scripts auxiliares.
-    # ---------------------------------------------------------------
     try:
         subprocess.run([sys.executable, f"scripts/{script}", "--grafico", argumento], check=True)
-        # Opcional: você pode descomentar a linha abaixo para exibir
-        # uma mensagem de sucesso após o script terminar:
-        # messagebox.showinfo("Sucesso", f"'{script}' executado com sucesso.")
+
     except subprocess.CalledProcessError as e:
         messagebox.showerror("Erro", f"Falha ao executar '{script}':\n{e}")
 
@@ -80,10 +73,7 @@ def atualizar_graficos(event):
     if opcoes_graficos.get(script):
         menu_grafico.current(0)
 
-
-# ---------------------------------------------------------------
-# Construção da interface Tkinter
-# ---------------------------------------------------------------
+# Interface 
 janela = tk.Tk()
 janela.title("Menu de Visualização de Temperaturas")
 
@@ -113,10 +103,6 @@ menu_grafico.grid(row=1, column=1, padx=10, pady=10)
 btn_executar = ttk.Button(janela, text="Executar", command=executar_script)
 btn_executar.grid(row=2, column=0, columnspan=2, pady=20)
 
-# ---------------------------------------------------------------
-# Pré-seleciona o primeiro script ao abrir a janela, para já
-# popular o combobox de gráficos imediatamente.
-# ---------------------------------------------------------------
 menu_script.current(0)
 atualizar_graficos(None)
 
